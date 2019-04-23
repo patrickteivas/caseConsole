@@ -10,13 +10,18 @@ namespace ConsoleApp2
 
         public App()
         {
-            _elements.Add(new Text("Hello World"));
+            var menu = new Menu();
+            menu.addElement("Element 1");
+            menu.addElement("Element 2");
+            menu.addElement("Element 3");
+            _elements.Add(menu);
         }
         
         public void loop()
         {
             while (running)
             {
+                input();
                 update();
                 draw();
             }
@@ -35,6 +40,18 @@ namespace ConsoleApp2
             foreach (var el in _elements)
             {
                 el.draw();
+            }
+        }
+
+        public void input()
+        {
+            if (Console.KeyAvailable)
+            {
+                var key = Console.ReadKey();
+                foreach (var el in _elements)
+                {
+                    el.input(key);
+                }
             }
         }
     }

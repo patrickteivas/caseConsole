@@ -6,9 +6,13 @@
     <e p="C:\Users\opilane\Desktop\ConsoleApp2" t="IncludeFlat">
       <e p="ConsoleApp2" t="IncludeRecursive">
         <e p="App.cs" t="Include" />
+        <e p="BaseElement.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Clock.cs" t="Include" />
         <e p="ConsoleApp2.csproj" t="IncludeRecursive" />
         <e p="ConsoleElement.cs" t="Include" />
+        <e p="Menu.cs" t="Include" />
+        <e p="MenuElement.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">

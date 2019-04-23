@@ -2,9 +2,8 @@ using System;
 
 namespace ConsoleApp2
 {
-    public class Text : ConsoleElement
+    public class Text : BaseElement, ConsoleElement
     {
-        private bool isDirty = true;
         private string content;
 
         public Text(string content)

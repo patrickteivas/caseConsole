@@ -6,7 +6,6 @@ namespace ConsoleApp2
     class Program
     {
         static Random random = new Random();
-        static List<string> menuEls = new List<string>();
         
         static void Main(string[] args)
         {
