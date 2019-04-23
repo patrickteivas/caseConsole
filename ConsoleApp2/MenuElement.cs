@@ -13,6 +13,12 @@ namespace ConsoleApp2
             this.Y = Y;
             this.text = text;
         }
+
+        public string getMethod()
+        {
+            return text.ToLower().Replace(" ", "");
+        }
+        
         public void update()
         {
             
@@ -34,9 +40,22 @@ namespace ConsoleApp2
             }
         }
 
-        public void setSelected()
+        public void select()
         {
+            if (!isSelected)
+            {
+                isDirty = true;
+            }
             isSelected = true;
+        }
+
+        public void deSelect()
+        {
+            if (isSelected)
+            {
+                isDirty = true;
+            }
+            isSelected = false;
         }
     }
 }

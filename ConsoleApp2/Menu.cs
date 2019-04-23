@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace ConsoleApp2
 {
@@ -34,13 +35,29 @@ namespace ConsoleApp2
         {
             if (key == ConsoleKey.PageUp)
             {
-                selectedIndex--;
-                selectElement();
+                if (selectedIndex > 0)
+                {
+                    selectedIndex--;
+                    selectElement();
+                    isDirty = true;
+                }
             }
+
             if (key == ConsoleKey.PageDown)
             {
-                selectedIndex++;
-                selectElement();
+                if (selectedIndex < menuEls.Count-1)
+                {
+                    selectedIndex++;
+                    selectElement();
+                    isDirty = true;
+                }
+            }
+
+            if (key == ConsoleKey.Enter)
+            {
+                var methodName = menuEls[selectedIndex].getMethod();
+                var method = typeof(MenuActions).GetMethod(methodName);
+                method.Invoke(null, null);
             }
         }
         
@@ -49,8 +66,17 @@ namespace ConsoleApp2
             menuEls.Add(new MenuElement(text, X, menuEls.Count));
             if (menuEls.Count == 1)
             {
-                menuEls[0].setSelected();
+                menuEls[0].select();
             }
+        }
+
+        private void selectElement()
+        {
+            foreach (var el in menuEls)
+            {
+                el.deSelect();
+            }
+            menuEls[selectedIndex].select();
         }
     }
 }

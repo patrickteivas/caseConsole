@@ -15,6 +15,7 @@ namespace ConsoleApp2
             menu.addElement("Element 2");
             menu.addElement("Element 3");
             _elements.Add(menu);
+            Console.Clear();
         }
         
         public void loop()
@@ -47,10 +48,12 @@ namespace ConsoleApp2
         {
             if (Console.KeyAvailable)
             {
-                var key = Console.ReadKey();
+                Console.CursorVisible = false;
+                Console.SetCursorPosition(0,0);
+                var key = Console.ReadKey(true);
                 foreach (var el in _elements)
                 {
-                    el.input(key);
+                    el.input(key.Key);
                 }
             }
         }

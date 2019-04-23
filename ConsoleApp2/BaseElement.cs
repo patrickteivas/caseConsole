@@ -25,6 +25,11 @@ namespace ConsoleApp2
             
         }
 
+        public void input(ConsoleKey key)
+        {
+            
+        }
+
         protected void clear()
         {
             Console.ResetColor();
