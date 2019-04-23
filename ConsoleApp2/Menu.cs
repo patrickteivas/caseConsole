@@ -8,7 +8,6 @@ namespace ConsoleApp2
     {
         private List<MenuElement> menuEls = new List<MenuElement>();
         private int selectedIndex = 0;
-
         public Menu()
         {
             
@@ -33,7 +32,7 @@ namespace ConsoleApp2
 
         public void input(ConsoleKey key)
         {
-            if (key == ConsoleKey.PageUp)
+            if (key == ConsoleKey.UpArrow)
             {
                 if (selectedIndex > 0)
                 {
@@ -41,16 +40,17 @@ namespace ConsoleApp2
                     selectElement();
                     isDirty = true;
                 }
-            }
 
-            if (key == ConsoleKey.PageDown)
+                
+            }
+            if (key == ConsoleKey.DownArrow)
             {
                 if (selectedIndex < menuEls.Count-1)
                 {
                     selectedIndex++;
                     selectElement();
                     isDirty = true;
-                }
+                }              
             }
 
             if (key == ConsoleKey.Enter)
@@ -60,7 +60,6 @@ namespace ConsoleApp2
                 method.Invoke(null, null);
             }
         }
-        
         public void addElement(string text)
         {
             menuEls.Add(new MenuElement(text, X, menuEls.Count));

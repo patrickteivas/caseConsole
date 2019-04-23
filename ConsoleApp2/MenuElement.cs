@@ -33,6 +33,7 @@ namespace ConsoleApp2
                     Console.BackgroundColor = ConsoleColor.Yellow;
                     Console.ForegroundColor = ConsoleColor.Black;
                 }
+                
                 Console.SetCursorPosition(X,Y);
                 Console.Write(text);
                 Console.ResetColor();
@@ -47,6 +48,7 @@ namespace ConsoleApp2
                 isDirty = true;
             }
             isSelected = true;
+            
         }
 
         public void deSelect()

@@ -2,21 +2,21 @@ using System;
 
 namespace ConsoleApp2
 {
-    public class MenuActions
+    static class MenuActions
     {
-        public static void elelement1()
+        public static void element1()
         {
-            Console.SetCursorPosition(10,10);
+            Console.SetCursorPosition(10, 10);
             Console.WriteLine("Element1");
         }
-        public static void elelement2()
+        public static void element2()
         {
-            Console.SetCursorPosition(10,10);
+            Console.SetCursorPosition(10, 10);
             Console.WriteLine("Element2");
         }
-        public static void elelement3()
+        public static void element3()
         {
-            Console.SetCursorPosition(10,10);
+            Console.SetCursorPosition(10, 10);
             Console.WriteLine("Element3");
         }
     }

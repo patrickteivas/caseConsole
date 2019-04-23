@@ -4,6 +4,7 @@ namespace ConsoleApp2
 {
     public class Text : BaseElement, ConsoleElement
     {
+
         private string content;
 
         public Text(string content)

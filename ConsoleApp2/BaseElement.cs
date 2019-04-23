@@ -9,7 +9,6 @@ namespace ConsoleApp2
         protected int height;
         protected int width;
         protected bool isDirty = true;
-
         public BaseElement()
         {
             
@@ -29,11 +28,9 @@ namespace ConsoleApp2
         {
             
         }
-
         protected void clear()
         {
             Console.ResetColor();
-            
             for (int i = X; i < X + width; i++)
             {
                 for (int j = Y; j < Y + height; j++)
@@ -42,13 +39,12 @@ namespace ConsoleApp2
                     Console.Write(" ");
                 }
             }
-            Console.SetCursorPosition(X,Y);
+            Console.SetCursorPosition(X, Y);
         }
         
         protected void fill()
         {
             Console.BackgroundColor = ConsoleColor.Red;
-            
             for (int i = X; i < X + width; i++)
             {
                 for (int j = Y; j < Y + height; j++)

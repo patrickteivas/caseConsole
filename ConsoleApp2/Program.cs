@@ -6,12 +6,12 @@ namespace ConsoleApp2
     class Program
     {
         static Random random = new Random();
-        
         static void Main(string[] args)
         {
             App app = new App();
             app.loop();
         }
+
 
         static ConsoleColor getRandomColor()
         {

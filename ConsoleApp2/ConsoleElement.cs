@@ -6,6 +6,7 @@ namespace ConsoleApp2
     {
         void update();
         void draw();
+
         void input(ConsoleKey key);
     }
 }

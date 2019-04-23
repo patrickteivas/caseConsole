@@ -4,12 +4,13 @@ namespace ConsoleApp2
 {
     public class Clock : BaseElement, ConsoleElement
     {
+
         private DateTime time;
 
         public Clock()
         {
-            X = 0;
-            Y = 0;
+            X = 10;
+            Y = 10;
             height = 1;
             width = DateTime.Now.ToLongTimeString().Length;
         }
